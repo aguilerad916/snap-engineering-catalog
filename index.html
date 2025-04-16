@@ -1,31 +1,43 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>LA TV Shows | Home</title>
-    <meta name="description" content="A Catalog of Shows Set in Los Angeles" />
+    <title>Top Soccer Teams</title>
+    <meta name="description" content="A Catalog of Top Soccer Teams in 2025" />
     <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <script type="text/javascript" src="scripts.js"></script>
   </head>
 
   <body>
     <header class="main-header">
-      <h1 class="title">LA TV Shows</h1>
+      <h1 class="title">Top Soccer Teams in 2025</h1>
     </header>
+    
     <div id="card-container"></div>
+    
     <div class="card" style="display: none">
       <div class="card-content">
-        <h2>TV Show Title</h2>
-        <img src="" alt="TV Show Poster" />
+        <h2>Soccer Team</h2>
+        <img src="" alt="Team Logo" />
         <ul>
-          <li>Bullet Point 1</li>
-          <li>Bullet Point 2</li>
-          <li>Bullet Point 3</li>
+          <li>Team Description</li>
+          <li>Team Stats</li>
         </ul>
       </div>
     </div>
+    
     <div class="footer">
-      <button onclick="quoteAlert();">Get A Quote!</button>
-      <button onclick="removeLastCard();">Remove A Card!</button>
+      <div class="sort-controls">
+        <button onclick="sortByWins();">Sort By Wins</button>
+        <button onclick="sortByDraws();">Sort By Draws</button>
+        <button onclick="sortByLosses();">Sort By Losses</button>
+      </div>
+      
+      <div class="filter-controls">
+        <label for="input">Show teams with wins ≥</label>
+        <input type="number" id="input" min="0" placeholder="Enter #" />
+        <button onclick="filterByWins();">Filter Teams</button>
+      </div>
     </div>
   </body>
 </html>
